@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import java.lang.*?>
+<BorderPane fx:id="SettingsPane" prefHeight="457.0" prefWidth="865.0" styleClass="BorderPane" stylesheets="@../css/Settings.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.nightwalker.smumclauncher.concrollers.SettingsConcroller">
+   <center>
+
+      <AnchorPane prefHeight="457.0" prefWidth="887.0" stylesheets="@../css/Settings.css" BorderPane.alignment="CENTER">
+
+         <children>
+            <VBox prefHeight="457.0" prefWidth="157.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#switchGame" opacity="0.9" prefHeight="40.0" prefWidth="179.0" stylesheets="@../css/Settings.css" text="游戏设置">
+                     <VBox.margin>
+                        <Insets top="13.0" />
+                     </VBox.margin>
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn-primary" />
+                     </styleClass>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#switchLauncher" opacity="0.9" prefHeight="40.0" prefWidth="163.0" stylesheets="@../css/Settings.css" text="启动器设置">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn-primary" />
+                     </styleClass></Button>
+                  <Button mnemonicParsing="false" onAction="#switchDonowload" opacity="0.9" prefHeight="40.0" prefWidth="165.0" stylesheets="@../css/Settings.css" text="下载">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn-primary" />
+                     </styleClass></Button>
+                  <Button mnemonicParsing="false" onAction="#BackToLauncher" opacity="0.8" prefHeight="40.0" prefWidth="80.0" stylesheets="@../css/Settings.css" text="返回">
+                     <VBox.margin>
+                        <Insets left="40.0" top="240.0" />
+                     </VBox.margin>
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn-default" />
+                     </styleClass>
+                  </Button>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <padding>
+                  <Insets left="4.0" />
+               </padding>
+            </VBox>
+            <AnchorPane fx:id="GAMEPane" layoutX="165.0" layoutY="14.0" prefHeight="432.0" prefWidth="686.0" styleClass="backAnchorPane" stylesheets="@../css/Settings.css">
+               <children>
+                  <Label layoutX="42.0" layoutY="24.0" prefHeight="29.0" prefWidth="55.0" text="游戏ID：" />
+                  <TextField fx:id="gameIdText" layoutX="101.0" layoutY="27.0" prefHeight="23.0" prefWidth="187.0" />
+                  <Button layoutX="584.0" layoutY="375.0" mnemonicParsing="false" onAction="#SaveGameSettings" prefHeight="40.0" prefWidth="85.0" stylesheets="@../css/Settings.css" text="确认修改">
+                     <styleClass>
+                        <String fx:value="btn" />
+                        <String fx:value="btn-default" />
+                     </styleClass></Button>
+                  <Label layoutX="310.0" layoutY="27.0" prefHeight="23.0" prefWidth="60.0" text="服务器ip：" />
+                  <TextField fx:id="serverIpText" layoutX="370.0" layoutY="27.0" prefHeight="23.0" prefWidth="157.0" />
+                  <Label layoutX="544.0" layoutY="27.0" prefHeight="23.0" prefWidth="38.0" text="端口：" />
+                  <TextField fx:id="serverPortText" layoutX="583.0" layoutY="27.0" prefHeight="23.0" prefWidth="92.0" promptText="0~65535" />
+                  <Label layoutX="42.0" layoutY="74.0" prefHeight="19.0" prefWidth="63.0" text="版本选择：" />
+                  <ChoiceBox fx:id="versionChooser" layoutX="101.0" layoutY="70.0" prefHeight="27.0" prefWidth="180.0" />
+                  <Label layoutX="42.0" layoutY="121.0" prefHeight="15.0" prefWidth="87.0" text="额外JVM参数：" />
+                  <TextArea fx:id="extraJVMText" layoutX="129.0" layoutY="115.0" prefHeight="56.0" prefWidth="549.0" />
+                  <Label layoutX="43.0" layoutY="188.0" text="额外Minecraft参数：" />
+                  <TextArea fx:id="extraMCText" layoutX="158.0" layoutY="181.0" prefHeight="59.0" prefWidth="520.0" />
+                  <Label layoutX="44.0" layoutY="258.0" text="内存分配：" />
+                  <Slider fx:id="memorySlider" layoutX="121.0" layoutY="259.0" majorTickUnit="1024.0" max="500.0" min="300.0" onMouseDragged="#setMemoryText" onMouseReleased="#setMemoryText" prefHeight="14.0" prefWidth="347.0" showTickLabels="true" showTickMarks="true" />
+                  <TextField fx:id="memoryText" layoutX="487.0" layoutY="254.0" prefHeight="23.0" prefWidth="95.0" />
+                  <Label layoutX="589.0" layoutY="253.0" prefHeight="25.0" prefWidth="60.0" text="MB">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="43.0" layoutY="308.0" prefHeight="16.0" prefWidth="63.0" text="Java版本：" />
+                  <ChoiceBox fx:id="javaVersionChooser" layoutX="106.0" layoutY="301.0" prefHeight="29.0" prefWidth="169.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="LAUNCHERPane" disable="true" layoutX="165.0" layoutY="14.0" prefHeight="432.0" prefWidth="686.0" styleClass="backAnchorPane" stylesheets="@../css/Settings.css" visible="false">
+               <children>
+                  <Label layoutX="43.0" layoutY="28.0" prefHeight="20.0" prefWidth="135.0" text=".Minecraft文件夹路径：" />
+                  <Button layoutX="178.0" layoutY="27.0" mnemonicParsing="false" onAction="#ChooseGamePath" prefHeight="23.0" prefWidth="68.0" text="选择路径" />
+                  <Label layoutX="290.0" layoutY="27.0" prefHeight="23.0" prefWidth="63.0" text="当前路径：" />
+                  <Label fx:id="gamePathLabel" layoutX="354.0" layoutY="31.0" onMouseClicked="#openRootDir" prefHeight="17.0" prefWidth="332.0" text="路径信息" textFill="#7b7b7b" />
+                  <Label layoutX="43.0" layoutY="67.0" prefHeight="23.0" prefWidth="96.0" text="游戏启动后选项：" />
+                  <ChoiceBox fx:id="launchCaseChoiceBox" layoutX="139.0" layoutY="67.0" prefHeight="23.0" prefWidth="153.0" />
+                  <Button layoutX="584.0" layoutY="376.0" mnemonicParsing="false" onAction="#SaveLauncherSettings" prefHeight="38.0" prefWidth="85.0" stylesheets="@../css/Settings.css" text="确认修改">
+                     <styleClass>
+                        <String fx:value="btn-default" />
+                        <String fx:value="btn" />
+                     </styleClass></Button>
+                  <Label layoutX="43.0" layoutY="113.0" prefHeight="19.0" prefWidth="89.0" text="下载路径设置：" />
+                  <Button fx:id="chooseDownloadPathButton" layoutX="132.0" layoutY="111.0" mnemonicParsing="false" onAction="#ChooseDownloadPath" prefHeight="23.0" prefWidth="68.0" text="选择路径" />
+                  <Label layoutX="243.0" layoutY="111.0" prefHeight="23.0" prefWidth="63.0" text="当前路径：" />
+                  <Label fx:id="downloadPathLabel" layoutX="306.0" layoutY="114.0" onMouseClicked="#openDownloadDir" prefHeight="17.0" prefWidth="329.0" text="路径信息" textFill="#7b7b7b" />
+                  <CheckBox fx:id="samePathCheckBox" layoutX="43.0" layoutY="153.0" mnemonicParsing="false" onAction="#switchPathSameAndDifferent" text="和.Minecraft文件夹路径保持一致" />
+                  <CheckBox fx:id="runDirCheckBox" layoutX="43.0" layoutY="190.0" mnemonicParsing="false" onAction="#switchRunDir" prefHeight="21.0" prefWidth="205.0" text="版本隔离" />
+                  <Label layoutX="43.0" layoutY="229.0" prefHeight="15.0" prefWidth="123.0" text="正版登录（微软账号）" />
+                  <Button fx:id="loginButton" layoutX="176.0" layoutY="224.0" mnemonicParsing="false" onAction="#loginStart" prefHeight="25.0" prefWidth="71.0" text="登录" />
+                  <Label layoutX="303.0" layoutY="226.0" prefHeight="21.0" prefWidth="38.0" text="状态：" />
+                  <Label fx:id="loginStatement" layoutX="331.0" layoutY="229.0" prefHeight="15.0" prefWidth="45.0" text="未登录" />
+                  <TextField fx:id="loginURIText" layoutX="43.0" layoutY="267.0" prefHeight="23.0" prefWidth="620.0" />
+                  <Label layoutX="43.0" layoutY="310.0" prefHeight="15.0" prefWidth="211.0" text="请在浏览器中打开并输入代码进行登录" />
+                  <CheckBox fx:id="switchLoginCheckBox" layoutX="43.0" layoutY="339.0" mnemonicParsing="false" onAction="#switchLogin" text="正版登录开关" />
+                  <Button fx:id="deleteLoginButton" layoutX="417.0" layoutY="225.0" mnemonicParsing="false" onAction="#deleteLogin" text="删除登录配置" />
+                  <CheckBox fx:id="launcherAssestsOnCheckBox" layoutX="43.0" layoutY="374.0" mnemonicParsing="false" onAction="#switchLauncherAssests" prefHeight="19.0" prefWidth="197.0" text="在启动器启动时显示提示信息" />
+               </children></AnchorPane>
+            <AnchorPane fx:id="DOWNLOADPane" disable="true" layoutX="165.0" layoutY="14.0" prefHeight="432.0" prefWidth="686.0" styleClass="backAnchorPane" stylesheets="@../css/Settings.css" visible="false">
+               <children>
+                  <Label layoutX="42.0" layoutY="26.0" prefHeight="15.0" prefWidth="58.0" text="版本选择:" />
+                  <ChoiceBox fx:id="downloadVersionChoiceBox" layoutX="99.0" layoutY="22.0" prefHeight="23.0" prefWidth="172.0" />
+                  <Button layoutX="305.0" layoutY="22.0" mnemonicParsing="false" onAction="#downloadStart" prefHeight="23.0" prefWidth="73.0" text="开始下载" />
+                  <Label layoutX="39.0" layoutY="73.0" prefHeight="24.0" prefWidth="53.0" text="版本号：" />
+                  <Label fx:id="downloadVersionLabel" layoutX="92.0" layoutY="73.0" prefHeight="23.0" prefWidth="48.0" text="未指定" />
+                  <Label layoutX="185.0" layoutY="74.0" prefHeight="21.0" prefWidth="43.0" text="状态：" />
+                  <Label fx:id="downloadStatementLabel" layoutX="228.0" layoutY="76.0" prefHeight="17.0" prefWidth="37.0" text="空闲" />
+                  <Button layoutX="397.0" layoutY="22.0" mnemonicParsing="false" onAction="#downloadCancel" prefHeight="24.0" prefWidth="75.0" text="取消下载" />
+                  <TextArea fx:id="downloadMessageText" layoutX="39.0" layoutY="111.0" prefHeight="305.0" prefWidth="628.0" />
+                  <Button layoutX="607.0" layoutY="78.0" mnemonicParsing="false" onAction="#clearDownloadMessageText" prefHeight="29.0" prefWidth="59.0" text="清空" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+
+   </center>
+</BorderPane>

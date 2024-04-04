@@ -1,0 +1,79 @@
+.BorderPane{
+    -fx-background-image: url("../pictures/LauncherBackGround.png");
+    -fx-background-size: 887 457;
+}
+.AnchorPane{
+    -fx-background-color: rgba(255, 255, 255, 0.65);
+    -fx-effect: dropshadow(three-pass-box, rgba(168, 168, 168, 0.8), 10, 0, 0, 0);
+
+}
+.ImageView{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+.btn {
+    -fx-font-weight: normal;
+    -fx-text-alignment: center;
+    -fx-cursor: default;
+    -fx-border-color: transparent;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-background-insets: 0, 0, -1, 0;
+    -fx-padding: 6px 12px 6px 12px;
+    -fx-font-size: 14px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-min-width: 80; }
+.btn:hover, .btn:focused, .btn.focused {
+    -fx-text-fill: #333;
+    -fx-fill: #333; }
+.btn:pressed, .btn.pressed {
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.125), 5px, 0, 0, 3px); }
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+    -fx-cursor: wait;
+    -fx-opacity: 0.65; }
+
+.btn-primary {
+    -fx-text-fill: #fff;
+    -fx-fill: #fff;
+    -fx-background-color: #337ab7;
+    -fx-border-color: #2e6da4; }
+.btn-primary:focused, .btn-primary.focused {
+    -fx-text-fill: #fff;
+    -fx-fill: #fff;
+    -fx-background-color: #286090;
+    -fx-border-color: #122b40; }
+.btn-primary:hover {
+    -fx-text-fill: #fff;
+    -fx-fill: #fff;
+    -fx-background-color: #286090;
+    -fx-border-color: #204d74; }
+.btn-primary:pressed, .btn-primary.pressed, .open > .btn-primary.dropdown-toggle {
+    -fx-text-fill: #fff;
+    -fx-fill: #fff;
+    -fx-background-color: #286090;
+    -fx-border-color: #204d74; }
+.btn-primary:pressed:hover, .btn-primary:pressed:focused, .btn-primary:pressed.focused, .btn-primary.pressed:hover, .btn-primary.pressed:focused, .btn-primary.pressed.focused, .open > .btn-primary.dropdown-toggle:hover, .open > .btn-primary.dropdown-toggle:focused, .open > .btn-primary.dropdown-toggle.focused {
+    -fx-text-fill: #fff;
+    -fx-fill: #fff;
+    -fx-background-color: #204d74;
+    -fx-border-color: #122b40; }
+.btn-primary:selected, .btn-primary.selected {
+    -fx-text-fill: #fff;
+    -fx-fill: #fff;
+    -fx-background-color: #337ab7;
+    -fx-border-color: #2e6da4; }
+.btn-primary:selected:hover, .btn-primary:selected:focused, .btn-primary:selected.focused, .btn-primary.selected:hover, .btn-primary.selected:focused, .btn-primary.selected.focused {
+    -fx-text-fill: #fff;
+    -fx-fill: #fff;
+    -fx-background-color: #204d74;
+    -fx-border-color: #122b40; }
+.btn-primary:pressed, .btn-primary.pressed, .open > .btn-primary.dropdown-toggle {
+    background-image: none; }
+.btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focused, .btn-primary.disabled.focused, .btn-primary.disabled:pressed, .btn-primary.disabled.pressed, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focused, .btn-primary[disabled].focused, .btn-primary[disabled]:pressed, .btn-primary[disabled].pressed, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focused, fieldset[disabled] .btn-primary.focused, fieldset[disabled] .btn-primary:pressed, fieldset[disabled] .btn-primary.pressed {
+    -fx-background-color: #337ab7;
+    -fx-border-color: #2e6da4; }
+.btn-primary .badge {
+    -fx-text-fill: #337ab7;
+    -fx-fill: #337ab7;
+    -fx-background-color: #fff; }
+

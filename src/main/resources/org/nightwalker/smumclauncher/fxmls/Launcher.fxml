@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import java.lang.String?>
+<BorderPane fx:id="launcherBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="865.0" styleClass="BorderPane" stylesheets="@../css/Launcher.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.nightwalker.smumclauncher.concrollers.LauncherConcroller">
+   <center>
+      <AnchorPane prefHeight="595.0" prefWidth="887.0" stylesheets="@../css/Launcher.css" BorderPane.alignment="CENTER">
+         <children>
+
+            <Button fx:id="settingsButton" layoutX="821.0" layoutY="14.0" mnemonicParsing="false" onAction="#openSettings" prefHeight="31.0" prefWidth="33.0" text="Button" />
+            <Button fx:id="launchButton" layoutX="529.0" layoutY="327.0" mnemonicParsing="false" onAction="#start" opacity="0.95" prefHeight="69.0" prefWidth="209.0" stylesheets="@../css/Launcher.css" text="启动">
+               <styleClass>
+                  <String fx:value="btn" />
+                  <String fx:value="btn-primary" />
+               </styleClass></Button>
+            <AnchorPane layoutX="108.0" layoutY="58.0" prefHeight="337.0" prefWidth="307.0" styleClass="AnchorPane" stylesheets="@../css/Launcher.css">
+               <children>
+                  <Label fx:id="versionLabel" layoutX="76.0" layoutY="205.0" prefHeight="60.0" prefWidth="236.0" text="游戏版本：1.16.5" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="loginLabel" layoutX="76.0" layoutY="248.0" prefHeight="61.0" prefWidth="170.0" text="登录状态：离线登录">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Line endX="139.00003051757812" endY="3.0517578125E-5" layoutX="136.0" layoutY="205.0" startX="-100.0" />
+                  <ImageView fx:id="changingImageView" fitHeight="134.0" fitWidth="241.0" layoutX="36.0" layoutY="28.0" onMouseClicked="#openBrowser" pickOnBounds="true" styleClass="ImageView">
+                     <image>
+                        <Image url="@../pictures/Slider-MC.png" />
+                     </image></ImageView>
+               </children>
+            </AnchorPane>
+
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

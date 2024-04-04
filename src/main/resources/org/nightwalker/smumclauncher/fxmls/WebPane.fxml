@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.web.WebView?>
+<AnchorPane fx:id="Root" prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.nightwalker.smumclauncher.concrollers.WebPaneConcroller">
+   <children>
+      <WebView fx:id="web" prefHeight="540.0" prefWidth="960.0" />
+   </children>
+</AnchorPane>
