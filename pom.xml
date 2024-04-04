@@ -109,20 +109,20 @@
                             <goal>package</goal>
                         </goals>
                         <configuration>
-                            <iconFile>D:\JAVA FUCKING AWSOME\MCLauncherProject\SmuMCLauncher\icon (2).ico</iconFile>
+                            <iconFile>此处放置icon的路径</iconFile>
                             <platform>windows</platform>
                             <mainClass>org.nightwalker.smumclauncher.JavaFXApp</mainClass>
                             <bundleJre>true</bundleJre>
                             <customizedJre>false</customizedJre>
                             <additionalResources>
                                 <additionalResource>
-                                    D:\JAVA FUCKING AWSOME\MCLauncherProject\SmuMCLauncher\datas
+                                    此处放置data文件夹的绝对路径
                                 </additionalResource>
                                 <additionalResource>
-                                    D:\JAVA FUCKING AWSOME\MCLauncherProject\SmuMCLauncher\properties
+                                    此处放置properties文件夹的绝对路径
                                 </additionalResource>
                                 <additionalResource>
-                                    D:\JAVA FUCKING AWSOME\MCLauncherProject\SmuMCLauncher\txts
+                                    此处放置txts文件夹的绝对路径
                                 </additionalResource>
                             </additionalResources>
                         </configuration>
